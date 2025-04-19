@@ -7,7 +7,7 @@ postsRouter.get('/posts', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.get('/posts:postId', (req: Request, res: Response) => {
+postsRouter.get('/posts/:postId', (req: Request, res: Response) => {
   res.json({});
 });
 
@@ -15,54 +15,54 @@ postsRouter.post('/posts', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.put('/posts:postId', (req: Request, res: Response) => {
+postsRouter.put('/posts/:postId', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.delete('/posts:postId', (req: Request, res: Response) => {
+postsRouter.delete('/posts/:postId', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.get('/posts:postId/likes', (req: Request, res: Response) => {
+postsRouter.get('/posts/:postId/likes', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.post('/posts:postId/likes', (req: Request, res: Response) => {
+postsRouter.post('/posts/:postId/likes', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.delete('/posts:postId/likes', (req: Request, res: Response) => {
+postsRouter.delete('/posts/:postId/likes', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.get('/posts:postId/comments', (req: Request, res: Response) => {
+postsRouter.get('/posts/:postId/comments', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.get('/posts:postId/comments:commentId', (req: Request, res: Response) => {
+postsRouter.get('/posts/:postId/comments/:commentId', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.post('/posts:postId/comments', (req: Request, res: Response) => {
+postsRouter.post('/posts/:postId/comments', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.put('/posts:postId/comments:commentId', (req: Request, res: Response) => {
+postsRouter.put('/posts/:postId/comments/:commentId', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.delete('/posts:postId/comments:commentId', (req: Request, res: Response) => {
+postsRouter.delete('/posts/:postId/comments/:commentId', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.get('/posts:postId/comments:commentId/likes', (req: Request, res: Response) => {
+postsRouter.get('/posts/:postId/comments/:commentId/likes', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.post('/posts:postId/comments:commentId/likes', (req: Request, res: Response) => {
+postsRouter.post('/posts/:postId/comments/:commentId/likes', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.delete('/posts:postId/comments:commentId/likes', (req: Request, res: Response) => {
+postsRouter.delete('/posts/:postId/comments/:commentId/likes', (req: Request, res: Response) => {
   res.json({});
 });
