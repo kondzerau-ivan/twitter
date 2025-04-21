@@ -3,10 +3,10 @@ import type { Request, Response } from 'express';
 
 export const authRouter = Router();
 
-authRouter.get('/auth', (req: Request, res: Response) => {
+authRouter.get('/', (req: Request, res: Response) => {
   res.json({});
 });
 
-authRouter.post('/auth', (req: Request, res: Response) => {
+authRouter.post('/', (req: Request, res: Response) => {
   res.json({});
 });

@@ -9,7 +9,7 @@ const BASE_URL = '/api/v1';
 const app = express();
 
 app.use(express.json());
-app.use(BASE_URL, authRouter);
+app.use(`${BASE_URL}/auth`, authRouter);
 app.use(`${BASE_URL}/users`, usersRouter);
 app.use(`${BASE_URL}/posts`, postsRouter);
 app.use(`${BASE_URL}/comments`, commentsRouter);
