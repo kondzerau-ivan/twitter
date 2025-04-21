@@ -14,15 +14,3 @@ commentsRouter.put('/:commentId', (req: Request, res: Response) => {
 commentsRouter.delete('/:commentId', (req: Request, res: Response) => {
   res.json({});
 });
-
-commentsRouter.get('/:commentId/likes', (req: Request, res: Response) => {
-  res.json({});
-});
-
-commentsRouter.post('/:commentId/likes', (req: Request, res: Response) => {
-  res.json({});
-});
-
-commentsRouter.delete('/:commentId/likes', (req: Request, res: Response) => {
-  res.json({});
-});

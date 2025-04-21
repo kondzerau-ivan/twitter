@@ -3,6 +3,7 @@ import { authRouter } from './interface/routes/auth.ts';
 import { postsRouter } from './interface/routes/posts.ts';
 import { usersRouter } from './interface/routes/users.ts';
 import { commentsRouter } from './interface/routes/comments.ts';
+import { likesRouter } from './interface/routes/likes.ts';
 
 const PORT = 3000;
 const BASE_URL = '/api/v1';
@@ -13,6 +14,7 @@ app.use(`${BASE_URL}/auth`, authRouter);
 app.use(`${BASE_URL}/users`, usersRouter);
 app.use(`${BASE_URL}/posts`, postsRouter);
 app.use(`${BASE_URL}/comments`, commentsRouter);
+app.use(BASE_URL, likesRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

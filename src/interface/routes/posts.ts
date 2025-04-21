@@ -23,18 +23,6 @@ postsRouter.delete('/:postId', (req: Request, res: Response) => {
   res.json({});
 });
 
-postsRouter.get('/:postId/likes', (req: Request, res: Response) => {
-  res.json({});
-});
-
-postsRouter.post('/:postId/likes', (req: Request, res: Response) => {
-  res.json({});
-});
-
-postsRouter.delete('/:postId/likes', (req: Request, res: Response) => {
-  res.json({});
-});
-
 postsRouter.get('/:postId/comments', (req: Request, res: Response) => {
   res.json({});
 });
