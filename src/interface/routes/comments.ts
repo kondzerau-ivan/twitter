@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import type { Request, Response } from 'express';
+import { likesRouter } from './likes.ts';
 
 export const commentsRouter = Router();
 
@@ -14,3 +15,5 @@ commentsRouter.put('/:commentId', (req: Request, res: Response) => {
 commentsRouter.delete('/:commentId', (req: Request, res: Response) => {
   res.json({});
 });
+
+commentsRouter.use('/:commentId/likes', likesRouter);

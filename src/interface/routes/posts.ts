@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import type { Request, Response } from 'express';
+import { likesRouter } from './likes.ts';
+
 
 export const postsRouter = Router();
 
@@ -30,3 +32,5 @@ postsRouter.get('/:postId/comments', (req: Request, res: Response) => {
 postsRouter.post('/:postId/comments', (req: Request, res: Response) => {
   res.json({});
 });
+
+postsRouter.use('/:postId/likes', likesRouter);
