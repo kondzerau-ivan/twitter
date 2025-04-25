@@ -1,4 +1,4 @@
-enum AuthType {
+export enum AuthType {
   PASSWORD = 'PASSWORD',
   OAUTH = 'OAUTH',
   TOTP = 'TOTP',
