@@ -1,4 +1,4 @@
-import { UserId, PostId } from "../types/Identifiers";
+import { UserId, PostId, CommentId } from "../types/Identifiers";
 
 export class Comment {
   /**
@@ -8,7 +8,7 @@ export class Comment {
    * @param authorId - Идентификатор автора комментария
    */
   constructor(
-    public readonly id: string,
+    public readonly id: CommentId,
     public content: string,
     public postId: PostId,
     public authorId: UserId,
