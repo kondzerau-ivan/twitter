@@ -1,3 +1,5 @@
+import { AuthId } from '../types/Identifiers.ts';
+
 export enum AuthType {
   PASSWORD = 'PASSWORD',
   OAUTH = 'OAUTH',
@@ -11,7 +13,7 @@ export class Auth {
    * @param secret - Секрет (пароль, токен и т.д.)
    */
   constructor(
-    public readonly id: string,
+    public readonly id: AuthId,
     public readonly type: AuthType,
     public readonly secret: Buffer
   ) { }
