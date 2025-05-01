@@ -15,6 +15,8 @@ export class Auth {
   constructor(
     public readonly id: AuthId,
     public readonly type: AuthType,
-    public readonly secret: Buffer
+    public readonly createdAt: Date,
+    public readonly expiresAt: Date,
+    public readonly extra: string,
   ) { }
 }
