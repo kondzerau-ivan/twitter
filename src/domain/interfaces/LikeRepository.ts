@@ -6,19 +6,19 @@ export interface LikeRepository {
    * Получить все лайки пользователя.
    * @param userId - ID пользователя
    */
-  getAllByUserId(userId: UserId): Promise<Like[]>;
+  findByUser(userId: UserId): Promise<Like[]>;
 
   /**
    * Получить все лайки для поста.
    * @param postId - ID поста
    */
-  getAllByPostId(postId: PostId): Promise<Like[]>;
+  findByPost(postId: PostId): Promise<Like[]>;
 
   /**
    * Получить все лайки для комментария.
    * @param commentId - ID комментария
    */
-  getAllByCommentId(commentId: CommentId): Promise<Like[]>;
+  findByComment(commentId: CommentId): Promise<Like[]>;
 
   /**
    * Создать лайк.

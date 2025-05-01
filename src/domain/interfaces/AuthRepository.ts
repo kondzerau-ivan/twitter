@@ -6,7 +6,7 @@ export interface AuthRepository {
    * Найти аутентификацию по идентификатору.
    * @param id - Уникальный идентификатор аутентификации
    */
-  getById(id: AuthId): Promise<Auth | null>;
+  get(id: AuthId): Promise<Auth | null>;
 
   /**
    * Создать новую запись аутентификации.

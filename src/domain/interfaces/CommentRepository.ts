@@ -6,26 +6,26 @@ export interface CommentRepository {
    * Найти комментарий по идентификатору.
    * @param id - Идентификатор комментария
    */  
-  getById(id: CommentId): Promise<Comment | null>;
+  get(id: CommentId): Promise<Comment | null>;
 
   /**
    * Получить все комментарии к посту.
    * @param postId - Идентификатор поста
    */
-  getAllByPostId(postId: PostId): Promise<Comment[]>;
+  findByPost(postId: PostId): Promise<Comment[]>;
 
   /**
    * Получить все комментарии автора.
    * @param authorId - Идентификатор автора
    */
-  getAllByAuthorId(authorId: UserId): Promise<Comment[]>;
+  findByAuthor(authorId: UserId): Promise<Comment[]>;
 
   /**
    * Получить все комментарии автора к конкретному посту.
    * @param postId - Идентификатор поста
    * @param authorId - Идентификатор автора
    */  
-  getAllByPostIdAndAuthorId(postId: PostId, authorId: UserId): Promise<Comment[]>;
+  findByPostAndAuthor(postId: PostId, authorId: UserId): Promise<Comment[]>;
 
   /**
    * Создать новый комментарий.

@@ -3,15 +3,10 @@ import { UserId } from "../types/Identifiers";
 
 export interface UserRepository {
   /**
-   * Получить всех пользователей.
-   */
-  getAll(): Promise<User[]>;
-
-  /**
    * Найти пользователя по идентификатору.
    * @param userId - Идентификатор пользователя
    */
-  getById(userId: UserId): Promise<User | null>;
+  get(userId: UserId): Promise<User | null>;
 
   /**
    * Создать нового пользователя.
@@ -30,4 +25,15 @@ export interface UserRepository {
    * @param userId - Идентификатор пользователя
    */  
   delete(userId: UserId): Promise<void>;
+
+  /**
+   * Получить всех пользователей.
+   */
+  getAll(): Promise<User[]>;
+
+  /**
+   * Проверить имя на существование
+   * @param username - Имя пользователя
+   */
+  checkUsername(username: string): boolean;
 }

@@ -6,13 +6,13 @@ export interface FollowRepository {
    * Получить всех, на кого подписан пользователь.
    * @param followerId - ID подписчика
    */
-  getFollowedByUser(followerId: UserId): Promise<Follow[]>;
+  findSubscriptions(followerId: UserId): Promise<Follow[]>;
 
   /**
    * Получить всех подписчиков пользователя.
    * @param followedId - ID пользователя, на которого подписались
    */
-  getFollowersOfUser(followedId: UserId): Promise<Follow[]>;
+  findFollowers(followedId: UserId): Promise<Follow[]>;
 
   /**
    * Создать новую подписку.

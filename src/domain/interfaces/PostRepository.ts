@@ -6,13 +6,13 @@ export interface PostRepository {
    * Найти пост по идентификатору.
    * @param postId - Идентификатор поста
    */
-  getById(postId: PostId): Promise<Post>;
+  findById(postId: PostId): Promise<Post>;
 
   /**
    * Получить все посты автора.
    * @param authorId - Идентификатор автора
    */
-  getAllByAuthorId(authorId: UserId): Promise<Post[]>;
+  findByAuthor(authorId: UserId): Promise<Post[]>;
 
   /**
    * Создать новый пост.
