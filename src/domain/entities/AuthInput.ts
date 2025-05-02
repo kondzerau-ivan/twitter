@@ -1,21 +1,13 @@
-import { AuthId } from '../types/Identifiers.ts';
+import { AuthType } from "./Auth";
 
-export enum AuthType {
-  PASSWORD = 'PASSWORD',
-  OAUTH = 'OAUTH',
-  TOTP = 'TOTP',
-}
-
-export class Auth {
+export class AuthInput {
   /**
-   * @param id - Уникальный идентификатор аутентификации
    * @param type - Тип аутентификации
    * @param createdAt - Дата создания
    * @param expiresAt - Дата окончания действия
    * @param extra - Соль для секрета
    */
   constructor(
-    public readonly id: AuthId,
     public readonly type: AuthType,
     public readonly createdAt: Date,
     public readonly expiresAt: Date,
