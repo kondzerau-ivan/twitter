@@ -3,6 +3,7 @@ import { authRouter } from './interface/routes/auth.ts';
 import { postsRouter } from './interface/routes/posts.ts';
 import { usersRouter } from './interface/routes/users.ts';
 import { commentsRouter } from './interface/routes/comments.ts';
+import { sequelizeInstance } from './config.ts';
 
 const PORT = 3000;
 const BASE_URL = '/api/v1';
@@ -17,3 +18,10 @@ app.use(`${BASE_URL}/comments`, commentsRouter);
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+try {
+  await sequelizeInstance.authenticate();
+  console.log('Connection has been established successfully.');
+} catch (error) {
+  console.error('Unable to connect to the database:', error);
+}
