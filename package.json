@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --experimental-transform-types --disable-warning=ExperimentalWarning --trace-warnings --watch ./src/index.ts",
+    "dev": "node --experimental-transform-types --disable-warning=ExperimentalWarning --trace-warnings --watch -r dotenv/config ./src/index.ts",
     "lint": "npx eslint --fix",
     "prepare": "husky"
   },
