@@ -1,9 +1,9 @@
 import express from 'express';
-import { authRouter } from './interface/routes/auth.ts';
-import { postsRouter } from './interface/routes/posts.ts';
-import { usersRouter } from './interface/routes/users.ts';
-import { commentsRouter } from './interface/routes/comments.ts';
-import { sequelizeInstance } from './config.ts';
+import { authRouter } from './interface/routes/auth';
+import { postsRouter } from './interface/routes/posts';
+import { usersRouter } from './interface/routes/users';
+import { commentsRouter } from './interface/routes/comments';
+import { sequelizeInstance } from './config';
 
 const PORT = 3000;
 const BASE_URL = '/api/v1';
