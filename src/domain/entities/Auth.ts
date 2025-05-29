@@ -1,4 +1,4 @@
-import { AuthId } from '../types/Identifiers';
+import { AuthId } from '../types/Identifiers.js';
 
 export enum AuthType {
   PASSWORD = 'PASSWORD',

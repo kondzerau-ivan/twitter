@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import type { Request, Response } from 'express';
-import { likesRouter } from './likes';
+import { likesRouter } from './likes.js';
 
 export const commentsRouter = Router();
 

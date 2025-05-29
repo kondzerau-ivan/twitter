@@ -1,5 +1,5 @@
-import { Follow } from "../relationships/Follow";
-import { UserId } from "../types/Identifiers";
+import { Follow } from "../relationships/Follow.js";
+import { UserId } from "../types/Identifiers.js";
 
 export interface FollowRepository {
   /**

@@ -1,4 +1,4 @@
-import { AuthType } from "./Auth";
+import { AuthType } from "./Auth.js";
 
 export class AuthInput {
   /**
@@ -12,5 +12,5 @@ export class AuthInput {
     public readonly createdAt: Date,
     public readonly expiresAt: Date,
     public readonly extra: string,
-  ) {}
+  ) { }
 }

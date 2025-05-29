@@ -1,4 +1,4 @@
-import { UserId } from "../types/Identifiers";
+import { UserId } from "../types/Identifiers.js";
 
 export class Follow {
   /**
@@ -8,5 +8,5 @@ export class Follow {
   constructor(
     public readonly followerId: UserId,
     public readonly followedId: UserId
-  ) {}
+  ) { }
 }

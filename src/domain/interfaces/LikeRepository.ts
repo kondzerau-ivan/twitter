@@ -1,5 +1,5 @@
-import { Like, TargetType } from "../relationships/Like";
-import { UserId, PostId, CommentId } from "../types/Identifiers";
+import { Like, TargetType } from "../relationships/Like.js";
+import { UserId, PostId, CommentId } from "../types/Identifiers.js";
 
 export interface LikeRepository {
   /**

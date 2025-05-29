@@ -1,4 +1,4 @@
-import { UserId, PostId, CommentId } from "../types/Identifiers";
+import { UserId, PostId, CommentId } from "../types/Identifiers.js";
 
 export type TargetType = 'post' | 'comment';
 
@@ -12,5 +12,5 @@ export class Like {
     public readonly userId: UserId,
     public readonly targetId: PostId | CommentId,
     public readonly targetType: TargetType
-  ) {}
+  ) { }
 }

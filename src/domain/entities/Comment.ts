@@ -1,4 +1,4 @@
-import { UserId, PostId, CommentId } from "../types/Identifiers";
+import { UserId, PostId, CommentId } from "../types/Identifiers.js";
 
 export class Comment {
   /**
@@ -12,5 +12,5 @@ export class Comment {
     public content: string,
     public postId: PostId,
     public authorId: UserId,
-  ) {}
+  ) { }
 }

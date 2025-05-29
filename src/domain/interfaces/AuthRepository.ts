@@ -1,5 +1,5 @@
-import { Auth } from "../entities/Auth";
-import { AuthId } from "../types/Identifiers";
+import { Auth } from "../entities/Auth.js";
+import { AuthId } from "../types/Identifiers.js";
 
 export interface AuthRepository {
   /**
