@@ -10,7 +10,5 @@ WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY package*.json ./
 RUN npm install --omit=dev
-COPY .env ./
-
 EXPOSE 3000
 CMD ["npm", "start"]
