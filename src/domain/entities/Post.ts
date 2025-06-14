@@ -1,4 +1,4 @@
-import { UserId, PostId } from "../types/Identifiers";
+import { UserId, PostId } from "../types/Identifiers.js";
 
 export class Post {
   /**
@@ -10,5 +10,5 @@ export class Post {
     public readonly id: PostId,
     public readonly content: string,
     public readonly authorId: UserId,
-  ) {}
+  ) { }
 }

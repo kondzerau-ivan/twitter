@@ -1,5 +1,5 @@
-import { Post } from "../entities/Post";
-import { PostId, UserId } from "../types/Identifiers";
+import { Post } from "../entities/Post.js";
+import { PostId, UserId } from "../types/Identifiers.js";
 
 export interface PostRepository {
   /**

@@ -1,4 +1,4 @@
-import { UserId } from "../types/Identifiers";
+import { UserId } from "../types/Identifiers.js";
 
 export class PostInput {
   /**
@@ -8,5 +8,5 @@ export class PostInput {
   constructor(
     public readonly content: string,
     public readonly authorId: UserId,
-  ) {}
+  ) { }
 }

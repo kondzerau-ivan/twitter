@@ -1,4 +1,4 @@
-import { AuthId } from '../types/Identifiers.ts';
+import { AuthId } from '../types/Identifiers.js';
 
 export enum AuthType {
   PASSWORD = 'PASSWORD',
@@ -20,5 +20,5 @@ export class Auth {
     public readonly createdAt: Date,
     public readonly expiresAt: Date,
     public readonly extra: string,
-  ) {}
+  ) { }
 }

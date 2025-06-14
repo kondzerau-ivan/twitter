@@ -1,11 +1,11 @@
-import { Comment } from "../entities/Comment";
-import { CommentId, PostId, UserId } from "../types/Identifiers";
+import { Comment } from "../entities/Comment.js";
+import { CommentId, PostId, UserId } from "../types/Identifiers.js";
 
 export interface CommentRepository {
   /**
    * Найти комментарий по идентификатору.
    * @param id - Идентификатор комментария
-   */  
+   */
   get(id: CommentId): Promise<Comment | null>;
 
   /**
@@ -24,7 +24,7 @@ export interface CommentRepository {
    * Получить все комментарии автора к конкретному посту.
    * @param postId - Идентификатор поста
    * @param authorId - Идентификатор автора
-   */  
+   */
   findByPostAndAuthor(postId: PostId, authorId: UserId): Promise<Comment[]>;
 
   /**

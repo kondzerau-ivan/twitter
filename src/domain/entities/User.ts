@@ -1,4 +1,4 @@
-import { UserId } from "../types/Identifiers";
+import { UserId } from "../types/Identifiers.js";
 
 export class User {
   /**
@@ -8,5 +8,5 @@ export class User {
   constructor(
     public readonly id: UserId,
     public readonly username: string
-  ) {}
+  ) { }
 }

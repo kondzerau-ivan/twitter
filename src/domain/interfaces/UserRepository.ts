@@ -1,5 +1,5 @@
-import { User } from "../entities/User";
-import { UserId } from "../types/Identifiers";
+import { User } from "../entities/User.js";
+import { UserId } from "../types/Identifiers.js";
 
 export interface UserRepository {
   /**
@@ -17,13 +17,13 @@ export interface UserRepository {
   /**
    * Обновить данные пользователя.
    * @param user - Данные пользователя
-   */  
+   */
   update(user: User): Promise<User>;
 
   /**
    * Удалить пользователя по идентификатору.
    * @param userId - Идентификатор пользователя
-   */  
+   */
   delete(userId: UserId): Promise<void>;
 
   /**
