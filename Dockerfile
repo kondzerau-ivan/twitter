@@ -25,7 +25,7 @@ RUN npm run build
 #
 # Prod
 #
-FROM node:22-alpine
+FROM node:22-alpine AS prod
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY package*.json ./
