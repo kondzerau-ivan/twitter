@@ -40,4 +40,4 @@ jobs:
             name: dist
             path: dist
       - name: Build Docker containers
-        run: docker compose build
+        run: docker compose -f compose.yml -f compose.prod.yml build
