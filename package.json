@@ -10,7 +10,7 @@
     "start": "node dist/index.js",
     "dev": "tsx watch -r dotenv/config src/index.ts",
     "lint": "npx eslint --fix",
-    "prepare": "if [ \"$NODE_ENV\" = \"production\" ]; then echo 'Skipping husky install in production'; else husky install; fi"
+    "prepare": "if [ \"$NODE_ENV\" = \"production\" ]; then echo 'Skipping husky install in production'; else husky; fi"
   },
   "repository": {
     "type": "git",
