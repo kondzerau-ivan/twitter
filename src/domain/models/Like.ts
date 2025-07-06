@@ -13,7 +13,7 @@ export const Like = sequelizeInstance.define(
       allowNull: false,
     },
     targetType: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("post", "comment"),
       allowNull: false,
     }
   },
