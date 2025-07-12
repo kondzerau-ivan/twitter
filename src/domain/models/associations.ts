@@ -5,88 +5,92 @@ import { Comment } from "./Comment";
 import { Follow } from "./Follow";
 import { Like } from "./Like";
 
-User.hasOne(Auth, {
-  foreignKey: "userId",
-  as: "auth"
-});
+export function defineAssociations() {
 
-Auth.belongsTo(User, {
-  foreignKey: "userId",
-  as: "user"
-});
+  User.hasOne(Auth, {
+    foreignKey: "userId",
+    as: "auth"
+  });
 
-User.hasMany(Post, {
-  foreignKey: "authorId",
-  as: "posts"
-});
+  Auth.belongsTo(User, {
+    foreignKey: "userId",
+    as: "user"
+  });
 
-Post.belongsTo(User, {
-  foreignKey: "authorId",
-  as: "author"
-});
+  User.hasMany(Post, {
+    foreignKey: "authorId",
+    as: "posts"
+  });
 
-User.hasMany(Comment, {
-  foreignKey: "authorId",
-  as: "comments"
-});
+  Post.belongsTo(User, {
+    foreignKey: "authorId",
+    as: "author"
+  });
 
-Comment.belongsTo(User, {
-  foreignKey: "authorId",
-  as: "author"
-});
+  User.hasMany(Comment, {
+    foreignKey: "authorId",
+    as: "comments"
+  });
 
-Post.hasMany(Comment, {
-  foreignKey: "postId",
-  as: "comments"
-});
+  Comment.belongsTo(User, {
+    foreignKey: "authorId",
+    as: "author"
+  });
 
-Comment.belongsTo(Post, {
-  foreignKey: "postId",
-  as: "post"
-});
+  Post.hasMany(Comment, {
+    foreignKey: "postId",
+    as: "comments"
+  });
 
-User.belongsToMany(User, {
-  through: Follow,
-  as: "followers", // подписчики
-  foreignKey: "followedId", // на кого подписались
-  otherKey: "followerId" // кто подписался
-});
+  Comment.belongsTo(Post, {
+    foreignKey: "postId",
+    as: "post"
+  });
 
-User.belongsToMany(User, {
-  through: Follow,
-  as: "followings", // подписки
-  foreignKey: "followerId", // кто подписан
-  otherKey: "followingId"   // на кого подписан
-});
+  User.belongsToMany(User, {
+    through: Follow,
+    as: "followers", // подписчики
+    foreignKey: "followedId", // на кого подписались
+    otherKey: "followerId" // кто подписался
+  });
 
-User.hasMany(Like, {
-  foreignKey: 'userId',
-  as: 'likes',
-});
+  User.belongsToMany(User, {
+    through: Follow,
+    as: "followings", // подписки
+    foreignKey: "followerId", // кто подписан
+    otherKey: "followingId"   // на кого подписан
+  });
 
-Like.belongsTo(User, {
-  foreignKey: 'userId',
-  as: 'user',
-});
+  User.hasMany(Like, {
+    foreignKey: 'userId',
+    as: 'likes',
+  });
 
-Post.hasMany(Like, {
-  foreignKey: 'targetId',
-  constraints: false,
-  scope: { targetType: 'post' },
-});
+  Like.belongsTo(User, {
+    foreignKey: 'userId',
+    as: 'user',
+  });
 
-Like.belongsTo(Post, {
-  foreignKey: 'targetId',
-  constraints: false,
-});
+  Post.hasMany(Like, {
+    foreignKey: 'targetId',
+    constraints: false,
+    scope: { targetType: 'post' },
+  });
 
-Comment.hasMany(Like, {
-  foreignKey: 'targetId',
-  constraints: false,
-  scope: { targetType: 'comment' },
-});
+  Like.belongsTo(Post, {
+    foreignKey: 'targetId',
+    constraints: false,
+  });
 
-Like.belongsTo(Comment, {
-  foreignKey: 'targetId',
-  constraints: false,
-});
+  Comment.hasMany(Like, {
+    foreignKey: 'targetId',
+    constraints: false,
+    scope: { targetType: 'comment' },
+  });
+
+  Like.belongsTo(Comment, {
+    foreignKey: 'targetId',
+    constraints: false,
+  });
+}
+
