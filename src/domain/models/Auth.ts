@@ -8,6 +8,10 @@ export const Auth = sequelizeInstance.define(
       type: DataTypes.UUIDV4,
       allowNull: false,
     },
+    userId: {
+      type: DataTypes.UUIDV4,
+      allowNull: false,
+    },
     type: {
       type: DataTypes.STRING,
       allowNull: false,
